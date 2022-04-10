@@ -7,6 +7,10 @@ app.config['SQLAlchemy_DATABASE_URI'] = "sqlite:///track-it.db"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
+class track(db.model):
+    username = db(db.string(50), nullable = False)
+
+
 @app.route("/")
 def hello():
     return render_template("login.html")
