@@ -13,9 +13,9 @@ class track(db.model):
     username = db(db.string(50), nullable = False)
 
 
-@app.route("/")
-def hello():
-    return render_template("login.html")
+# @app.route("/")
+# def hello():
+#     return render_template("login.html")
     
 
 # if __name__ == "__main__":
